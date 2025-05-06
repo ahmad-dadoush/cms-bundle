@@ -1,0 +1,9 @@
+<div class="dynamic-component">
+    {% if fields is not empty %}
+        {% for key, value in fields %}
+            <div data-field="{{ key }}">{{ value }}</div>
+        {% endfor %}
+    {% else %}
+        <em>No data provided.</em>
+    {% endif %}
+</div>

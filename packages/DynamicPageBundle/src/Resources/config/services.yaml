@@ -1,0 +1,19 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+    bind:
+      string $defaultTemplate: '%dynamic_page.default_template%'
+
+  # your main rendering pipeline
+  Dadoush\DynamicPageBundle\Service\ComponentRenderer: ~
+  Dadoush\DynamicPageBundle\Service\ComponentManager: ~
+
+  Dadoush\DynamicPageBundle\Twig\ComponentExtension:
+    tags: ['twig.extension']
+
+  # Doctrine repository
+  Dadoush\DynamicPageBundle\Repository\ComponentRepository:
+    arguments: ['@doctrine']
+    tags: ['doctrine.repository_service']

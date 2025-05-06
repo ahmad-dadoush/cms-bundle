@@ -1,0 +1,28 @@
+{
+  "name": "dadoush/dynamic-page-bundle",
+  "type": "symfony-bundle",
+  "description": "A bundle for dynamic page components and custom fields",
+  "license": "MIT",
+  "authors": [
+    { "name": "Ahmad Dadoush", "email": "ah.dadoush@gmail.com" }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Dadoush\\DynamicPageBundle\\": "src/"
+    }
+  },
+  "require": {
+    "php": ">=8.1",
+    "symfony/framework-bundle": "^7.0",
+    "doctrine/orm": "^3.0" 
+  },
+  "suggest": {
+    "easycorp/easyadmin-bundle": "Allows automatic CRUD admin for Components"
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-main": "1.0-dev"
+    }
+  }
+}
+  

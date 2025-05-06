@@ -1,0 +1,13 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: true   # controllers must be public
+
+  # Form for the Component entity
+  Dadoush\DynamicPageBundle\Form\ComponentType: ~
+
+  # Our hand-write admin controller
+  Dadoush\DynamicPageBundle\Controller\Admin\:
+    resource: '../../Controller/Admin/*Controller.php'
+    tags: ['controller.service_arguments']

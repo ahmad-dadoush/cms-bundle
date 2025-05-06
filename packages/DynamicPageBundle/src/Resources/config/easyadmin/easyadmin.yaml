@@ -1,0 +1,16 @@
+easyadmin:
+  entities:
+    Component:
+      class: Dadoush\DynamicPageBundle\Entity\Component
+      label: 'Dynamic Components'
+      list:
+        title: 'Components'
+        fields:
+          - id
+          - name
+      form:
+        title: 'Edit Component'
+        fields:
+          - name
+          - template
+          - { property: fields, type: 'json' }

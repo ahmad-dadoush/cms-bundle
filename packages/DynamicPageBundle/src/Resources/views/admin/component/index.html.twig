@@ -1,0 +1,25 @@
+{% extends '@DynamicPage/admin/base.html.twig' %}
+{% block title %}Components{% endblock %}
+
+{% block body %}
+  <h1>Components</h1>
+  <a href="{{ path('dynamic_page_admin_new') }}">Create new</a>
+  <table>
+    <tr><th>ID</th><th>Name</th><th>Actions</th></tr>
+    {% for c in components %}
+      <tr>
+        <td>{{ c.id }}</td>
+        <td>{{ c.name }}</td>
+        <td>
+          <a href="{{ path('dynamic_page_admin_edit', {id:c.id}) }}">edit</a>
+          <form method="post" action="{{ path('dynamic_page_admin_delete',{id:c.id}) }}" style="display:inline">
+            <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ c.id) }}">
+            <button>delete</button>
+          </form>
+        </td>
+      </tr>
+    {% else %}
+      <tr><td colspan="3">No components found.</td></tr>
+    {% endfor %}
+  </table>
+{% endblock %}

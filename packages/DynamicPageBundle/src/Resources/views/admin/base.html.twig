@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Admin – DynamicPage{% endblock %}</title>
+    {% block stylesheets %}{% endblock %}
+  </head>
+  <body>
+    <nav><a href="/">Home</a> | <a href="/admin/components">Components</a></nav>
+    <main>{% block body %}{% endblock %}</main>
+    {% block javascripts %}{% endblock %}
+  </body>
+</html>

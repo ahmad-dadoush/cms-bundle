@@ -1,0 +1,10 @@
+controllers:
+    resource:
+        path: ../src/Controller/
+        namespace: App\Controller
+    type: attribute
+# Activate for custom CRUD (no easyadmin)
+#dynamic_page_admin:
+#    resource: '@DynamicPageBundle/Controller/Admin'
+#    type: attribute
+#    prefix: /admin

@@ -1,0 +1,11 @@
+{% extends '@DynamicPage/admin/base.html.twig' %}
+{% block title %}{{ form.vars.value.id ? 'Edit' : 'New' }} Component{% endblock %}
+
+{% block body %}
+  {{ form_start(form) }}
+    {{ form_row(form.name) }}
+    {{ form_row(form.template) }}
+    {{ form_row(form.fields) }}
+    <button>{{ form.vars.value.id ? 'Update' : 'Create' }}</button>
+  {{ form_end(form) }}
+{% endblock %}
